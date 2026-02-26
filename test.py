@@ -81,15 +81,15 @@ with col2:
         df=pd.read_csv("users.csv")
         user = df[df["username"] == username]
 
-        # 1️⃣ Check if user exists
+        # Check if user exists
         if user.empty:
             st.error("User does not exist")
         
         else:
-            # 2️⃣ Extract stored hash
+            #  Extract stored hash
             stored_password = user.iloc[0]["password"]
 
-            # 3️⃣ Verify password securely
+            #  Verify password securely
             if verify_password(stored_password, password):
                 st.success("Login successful")
                 st.session_state["logged_in"] = True
