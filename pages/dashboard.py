@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 if not  st.session_state.get("logged_in", False):
     st.warning("Oops! access denied. Please login")
-    st.switch_page("test.py")
+    st.switch_page("app.py")
     st.stop()
 
 else:
@@ -62,7 +62,7 @@ else:
 button=st.sidebar.button("logout")
 if button:
     st.session_state.clear()
-    st.switch_page("test.py")
+    st.switch_page("app.py")
 
 
 st.sidebar.image("pages/logo.jpg", width=120)
@@ -116,6 +116,6 @@ st.sidebar.image("pages/logo.jpg", width=120)
 
 # if st.button("logout"):
 #     st.session_state.clear()
-#     st.switch_page("test.py")
+#     st.switch_page("app.py")
 #     #
 

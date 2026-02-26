@@ -4,7 +4,7 @@ import pandas as pd
 
 if not  st.session_state.get("logged_in", False):
     st.warning("Oops! access denied. Please login")
-    st.switch_page("test.py")
+    st.switch_page("app.py")
     st.stop()
 
 
@@ -90,6 +90,6 @@ else:
 button=st.sidebar.button("logout")
 if button:
     st.session_state.clear()
-    st.switch_page("test.py")
+    st.switch_page("app.py")
 
     
